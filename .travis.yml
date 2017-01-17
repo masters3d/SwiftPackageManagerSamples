@@ -2,12 +2,12 @@ language: generic
 matrix:
   include:
     - script: 
-        - cd /SwiftPackageManagerSamples/Swift-PackageAccumulate && swift test
+        - cd /Swift-PackageAccumulate && swift test
       env: JOB=SPM
       os: osx
       osx_image: xcode8.2
     - script:
-        - docker run -v `pwd`:/SwiftPackageManagerSamples norionomura/sourcekit:302 bash -c "cd /SwiftPackageManagerSamples/Swift-PackageAccumulate && swift test"
+        - docker run -v `pwd`:/SwiftPackageManagerSamples norionomura/sourcekit:302 bash -c "cd /SwiftPackageManagerSamples/Swift-PackageAccumulate && swift build"
       env: JOB=Linux
       sudo: required
       services: docker
