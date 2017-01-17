@@ -2,7 +2,8 @@ language: generic
 matrix:
   include:
     - script: 
-        - cd /Swift-PackageAccumulate && swift test
+        - ls
+        - cd /Swift-PackageAccumulate/ && swift test
       env: JOB=SPM
       os: osx
       osx_image: xcode8.2
