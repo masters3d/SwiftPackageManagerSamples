@@ -3,7 +3,7 @@ matrix:
   include:
     - script: 
         - ls
-        - cd /Swift-PackageAccumulate/ && swift test
+        - cd ./Swift-PackageAccumulate/ && swift test
       env: JOB=SPM
       os: osx
       osx_image: xcode8.2
